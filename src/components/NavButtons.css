@@ -1,0 +1,50 @@
+.nav__container {
+    height: 100%;
+    width: 50px;
+    padding: 10% 0;
+
+    position: absolute;
+    z-index: 150;
+    right: 0;
+
+
+}
+
+.nav__containerButtons {
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.nav__liButton {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: bisque;
+    margin: 10px 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav__liButton svg path{
+    stroke: #e48417;
+}
+
+.nav__liButton:hover svg path {
+    stroke: #fafafa;
+}
+
+
+.nav__iconButtons {
+    width: 30px;
+    height: 30px;
+
+}
+
