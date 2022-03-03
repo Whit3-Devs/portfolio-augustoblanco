@@ -5,8 +5,8 @@
 
     position: absolute;
     z-index: 150;
-    right: 0;
-
+    right: 5px;
+    top: 0;
 
 }
 
@@ -21,35 +21,48 @@
 }
 
 .nav__liButton {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    background-color: #00D1B2;
     margin: 10px 0;
+}
 
+.nav__navlink {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(213, 213, 213);
+
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.nav__liButton:hover {
+.nav__navlink:hover {
     background-color: #70e8d6;
-
 }
 
+/* Path color svg icon */
 .nav__liButton svg path{
-    stroke: #fafafa;
+    stroke: #555;
 }
 
 .nav__liButton:hover svg path {
     stroke: #fafafa;
 }
-
+/* End path color svg icon */
 
 .nav__iconButtons {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
 
 }
+/* 
+background-color: #70e8d6; */
 
+.activeBackground {
+    background-color: #70e8d6;
+}
+
+.activeBackground svg path{
+    stroke: #fafafa;
+}

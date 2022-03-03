@@ -50,7 +50,7 @@ const ParticlesBackground = () => {
           detectsOn: "window",
           events: {
             onClick: {
-              enable: true,
+              enable: false,
               mode: "push",
             },
             onDiv: {

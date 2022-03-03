@@ -1,6 +1,6 @@
 import { Route, Switch } from "react-router-dom";
 import React from "react";
-import NavButtons from "./components/NavButtons";
+import Navbar from "./components/navbar/Navbar";
 import Home from "./views/Home";
 import About from "./views/About";
 import Portfolio from "./views/Portfolio";
@@ -12,8 +12,7 @@ import ParticlesBackground from "./assets/background/ParticlesBackground";
 const App = () => {
   return (
     <>
-
-      <NavButtons />
+      <Navbar />
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/about" component={About} />
