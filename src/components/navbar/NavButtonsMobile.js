@@ -6,8 +6,9 @@ import {
   GrMailOption,
   GrConfigure,
 } from "react-icons/gr";
-import { NavLink } from "react-router-dom";
-import "./NavButtons.css";
+import { NavLink, Link } from "react-router-dom";
+import "./NavButtonsMobile.css";
+import logoAB from '../../assets/images/logoabwhite.png'
 
 const NavButtonsMobile = () => {
   const [hidden, setHidden] = useState(false);
@@ -24,12 +25,29 @@ const NavButtonsMobile = () => {
     }
   }, [hidden]);
 
+  const stylePositionMenu = {
+    position: "absolute",
+    zIndex: "200",
+    width: "100%",
+  };
+
   return (
     <>
-      <nav className="navbar" role="navigation" aria-label="main navigation">
+      <nav
+        className="navbar"
+        style={stylePositionMenu}
+        role="navigation"
+        aria-label="main navigation"
+      >
         <div className="navbar-brand">
-          <a
-            role="button"
+          <a class="navbar-item" href="https://augustoblancoweb.web.app/">
+            <img
+              src={logoAB}
+              width="40"
+              height="30"
+            />
+          </a>
+          <button
             className="navbar-burger"
             aria-label="menu"
             aria-expanded="false"
@@ -41,50 +59,50 @@ const NavButtonsMobile = () => {
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
-          </a>
+          </button>
         </div>
         <div id="navbarMenu" className="navbar-menu">
           <div className="navbar-end">
             <NavLink
               exact
               to="/"
-              className="nav__navlink"
-              activeClassName="activeBackground"
+              className="navbar-item is-flex is-align-content-center"
+              activeClassName="activeBackgroundMobile"
             >
-              <GrHomeRounded className="nav__iconButtons" />
-              <h3>Inicio</h3>
+              <GrHomeRounded className="icon is-medium mr-3 ml-3" />
+              <span className="is-size-5">Inicio</span>
             </NavLink>
             <NavLink
               to="/about"
-              className="nav__navlink"
-              activeClassName="activeBackground"
+              className="navbar-item is-flex is-align-content-center"
+              activeClassName="activeBackgroundMobile"
             >
-              <GrUser className="nav__iconButtons" />
-              <h3>Sobre Mí</h3>
+              <GrUser className="icon is-medium mr-3 ml-3" />
+              <span className="is-size-5">Sobre Mí</span>
             </NavLink>
             <NavLink
               to="/portfolio"
-              className="nav__navlink"
-              activeClassName="activeBackground"
+              className="navbar-item is-flex is-align-content-center"
+              activeClassName="activeBackgroundMobile"
             >
-              <GrBriefcase className="nav__iconButtons" />
-              <h3>Portfolio</h3>
+              <GrBriefcase className="icon is-medium mr-3 ml-3" />
+              <span className="is-size-5">Portfolio</span>
             </NavLink>
             <NavLink
               to="/skills"
-              className="nav__navlink"
-              activeClassName="activeBackground"
+              className="navbar-item is-flex is-align-content-center"
+              activeClassName="activeBackgroundMobile"
             >
-              <GrConfigure className="nav__iconButtons" />
-              <h3>Skills</h3>
+              <GrConfigure className="icon is-medium mr-3 ml-3" />
+              <span className="is-size-5">Skills</span>
             </NavLink>
             <NavLink
               to="/contact"
-              className="nav__navlink"
-              activeClassName="activeBackground"
+              className="navbar-item is-flex is-align-content-center"
+              activeClassName="activeBackgroundMobile"
             >
-              <GrMailOption className="nav__iconButtons" />
-              <h3>Contacto</h3>
+              <GrMailOption className="icon is-medium mr-3 ml-3" />
+              <span className="is-size-5">Contacto</span>
             </NavLink>
           </div>
         </div>

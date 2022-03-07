@@ -9,6 +9,7 @@ import Contact from "./views/Contact";
 import PageNotFound from "./views/PageNotFound";
 import ParticlesBackground from "./assets/background/ParticlesBackground";
 
+
 const App = () => {
   return (
     <>

@@ -1,8 +1,15 @@
 import Particles from "react-tsparticles";
 
-import React from "react";
+import React, {useEffect, useState} from "react";
 
 const ParticlesBackground = () => {
+
+  const [mobile, setmobile] = useState(false);
+
+  useEffect(() => {
+    setmobile(window.innerWidth > 1280);
+  }, [mobile]);
+
   const particlesInit = (main) => {
     // console.log(main);
 
@@ -60,7 +67,7 @@ const ParticlesBackground = () => {
               type: "circle",
             },
             onHover: {
-              enable: true,
+              enable: mobile,
               mode: "grab",
               parallax: {
                 enable: true,
