@@ -1,5 +1,4 @@
 import React from "react";
-import { Container } from "react-bulma-components";
 
 const styles = {
   height: "100%",
@@ -8,7 +7,7 @@ const styles = {
 };
 
 const About = () => {
-  return <Container style={styles}></Container>;
+  return <div className="container" style={styles}></div>
 };
 
 export default About;

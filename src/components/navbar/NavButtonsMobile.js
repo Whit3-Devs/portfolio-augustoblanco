@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Navbar } from "react-bulma-components";
 import {
   GrHomeRounded,
   GrUser,
@@ -12,11 +11,6 @@ import "./NavButtons.css";
 
 const NavButtonsMobile = () => {
   const [hidden, setHidden] = useState(false);
-
-
-  const stylesNav = {
-    "z-index": "999"
-  };
 
   useEffect(() => {
     const navbarMenu = document.getElementById("navbarMenu");
@@ -31,17 +25,26 @@ const NavButtonsMobile = () => {
   }, [hidden]);
 
   return (
-      <Navbar color="text" fixed="top" style={stylesNav}>
-        <Navbar.Brand>
-          <Navbar.Burger
-            id="navbarBurger"
+    <>
+      <nav className="navbar" role="navigation" aria-label="main navigation">
+        <div className="navbar-brand">
+          <a
+            role="button"
+            className="navbar-burger"
+            aria-label="menu"
+            aria-expanded="false"
+            data-target="navbarBasicExample"
             onClick={() => {
               setHidden(!hidden);
             }}
-          />
-        </Navbar.Brand>
-        <Navbar.Menu id="navbarMenu">
-          <Navbar.Container>
+          >
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+        <div id="navbarMenu" className="navbar-menu">
+          <div className="navbar-end">
             <NavLink
               exact
               to="/"
@@ -83,9 +86,10 @@ const NavButtonsMobile = () => {
               <GrMailOption className="nav__iconButtons" />
               <h3>Contacto</h3>
             </NavLink>
-          </Navbar.Container>
-        </Navbar.Menu>
-      </Navbar>
+          </div>
+        </div>
+      </nav>
+    </>
   );
 };
 

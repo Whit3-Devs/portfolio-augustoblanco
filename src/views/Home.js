@@ -1,32 +1,40 @@
 import React from "react";
-import { Container, Columns, Heading, Image } from "react-bulma-components";
 import imagenHome from "../assets/images/person_programing.svg";
 
-const styles = {
-  "height": "100%",
-  "position": "absoulte",
-};
-
-const stylesCol = {
-  "height": "100%",
-  "position": "relative",
-  "z-index": "35"
-};
-
 const Home = () => {
+
+  const stylesContainer = {
+    "position": "absolute",
+    "height": "100%",
+    "width": "100%",
+    "zIndex": "30"
+  }
+
+  const stylesColumns = {
+    "position": "relative",
+    "height": "100%",
+    "zIndex": "35",
+    "margin-left": "30px"
+  }
+
   return (
-    <Container style={styles} zindex={30}>
-      <Columns vCentered style={stylesCol}>
-        <Columns.Column>
-          <Image src={imagenHome} className="imageHome"/>
-        </Columns.Column>
-        <Columns.Column>
-          <Heading size={2}>Hola, soy Augusto Blanco</Heading>
-          <Heading subtitle size={3}>Desarrollador Full-Stack</Heading>
-          <Heading subtitle size={5}>“Perseverancia, determinación y consistencia, es el camino para resolver y afrontar desafíos”</Heading>
-        </Columns.Column>
-      </Columns>
-    </Container>
+    <div style={stylesContainer}>
+      <div className="columns is-vcentered" style={stylesColumns}>
+        <div className="column is-half">
+          <figure className="image is-540x540">
+            <img src={imagenHome} />
+          </figure>
+        </div>
+        <div className="column is-half">
+          <h1 className="title is-1">Hola, soy Augusto Blanco</h1>
+          <h2 className="title is-2">Desarrollador Full-Stack</h2>
+          <h4 className="title is-5">
+            “Perseverancia, determinación y consistencia, es el camino para
+            resolver y afrontar desafíos”
+          </h4>
+        </div>
+      </div>
+    </div>
   );
 };
 
