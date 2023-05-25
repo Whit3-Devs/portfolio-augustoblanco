@@ -1,7 +1,10 @@
 const PorqueYo = () => {
-  return (
-    <div>PorqueYo</div>
-  )
-}
+  return (<section id="porqueyo">
+    <div>
+      <img src="" alt="asdf" />
+      <img src="" alt="asdf" />
+    </div>
+  </section>);
+};
 
-export default PorqueYo
+export default PorqueYo;
